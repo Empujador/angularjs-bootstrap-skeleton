@@ -4,7 +4,7 @@ module.exports = function(grunt, options) {
 
     grunt.registerTask('app:deploy',[
         // clean all dirs
-        'clean:public',
+        'clean:dist',
         'clean:build-app',
 
         // handle less files
