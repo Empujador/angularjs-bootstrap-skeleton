@@ -11,7 +11,7 @@ angular.module('myABS').service('absFixtures',[
             loadFixtures: function(){
                 self.state.set('loading');
                 $http.get('fixtures.json').then(function(response){
-                    self.data = response.data.client.fixtures;
+                    self.data = response.data.app.fixtures;
                     self.trigger('data:loaded');
                     self.state.unset('loading');
                     self.state.set('loaded');
